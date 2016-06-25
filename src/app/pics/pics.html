@@ -1,0 +1,31 @@
+Hola pics
+
+<ul>
+    <li ng-repeat="dir in pics.dirList" ng-click="pics.openOrAdd(dir);">
+        <span class="folder"> {{dir.action}} </span> {{dir.path}} ({{dir.type}})
+    </li>
+</ul>
+
+
+Opened file
+
+<ul>
+    <li ng-repeat="dir in pics.openedDir" ng-click="pics.openOrAdd(dir);">
+        <span class="folder"> {{dir.action}} </span> {{dir.path}} ({{dir.type}})
+    </li>
+</ul>
+
+
+Selected Files
+
+<ul>
+    <li ng-repeat="dir in pics.pictureList" ng-if="dir.path">
+       {{dir.path}}
+    </li>
+</ul>
+
+<input type="button" ng-click="pics.save();" value="guardar">
+
+<div id="shareProgress">
+    {{pics.current || 0}} of {{pics.total || 0}}
+</div>

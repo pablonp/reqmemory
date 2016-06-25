@@ -20,13 +20,14 @@
     <!-- endinject -->
     <!-- endbuild -->
   </head>
+  
   <body class="reqmemory">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <div ng-view></div>
-    
+    <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="3vc8vd705z7p1gm"></script>
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
@@ -43,18 +44,21 @@
     <script src="../bower_components/malarkey/dist/malarkey.min.js"></script>
     <script src="../bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
     <script src="../bower_components/moment/moment.js"></script>
+    <script src="../bower_components/lodash/lodash.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
     <!-- inject:js -->
-    <script src="app/commons/services/dropbox.service.js"></script>
     <script src="app/index.module.js"></script>
     <script src="app/components/webDevTec/webDevTec.service.js"></script>
-    <script src="app/components/malarkey/malarkey.directive.js"></script>
     <script src="app/components/navbar/navbar.directive.js"></script>
-    <script src="app/components/githubContributor/githubContributor.service.js"></script>
+    <script src="app/components/malarkey/malarkey.directive.js"></script>
     <script src="app/components/dropbox/dropbox.min.js"></script>
+    <script src="app/components/githubContributor/githubContributor.service.js"></script>
+    <script src="app/commons/services/dropbox.service.js"></script>
+    <script src="app/templates/templates.controller.js"></script>
+    <script src="app/pics/pics.controller.js"></script>
     <script src="app/oauth/oauth.controller.js"></script>
     <script src="app/main/main.controller.js"></script>
     <script src="app/index.run.js"></script>
