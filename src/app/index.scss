@@ -98,6 +98,21 @@ $text-color:       $gray;
       height: 50px;
     }
   }
+  .nav > li > a:hover, .nav > li > a:focus,
+  .nav .open > a, .nav .open > a:hover, .nav .open > a:focus,
+  .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-color: darken($blue-light,10%);
+    color: $white;
+  }
+  .dropdown-menu {
+    padding: 0;
+    &> li > a, &> li > a:hover, &> li > a:focus {
+      padding: 10px 20px;
+    }
+    .divider {
+      margin: 0;
+    }
+  }
 }
 
 
