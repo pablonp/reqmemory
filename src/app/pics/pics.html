@@ -53,7 +53,6 @@
         <td>{{dir.path}}</td>
       </tr>
       <tr ng-if="pics.subFolder" ng-repeat="dir in pics.openedDir" ng-click="pics.openOrAdd(dir);">
-        <td><span class="{{dir.type}}r"> {{dir.action}} </span> ({{dir.type}})</td>
         <td>
           <span ng-class="{'glyphicon glyphicon-folder-close':dir.type=='folder','glyphicon glyphicon-file':dir.type=='file'}"></span>
         </td>
