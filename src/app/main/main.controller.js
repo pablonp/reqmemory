@@ -6,34 +6,35 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr) {
+  function MainController($log, $timeout) {
     var vm = this;
 
-    vm.awesomeThings = [];
-    vm.classAnimation = '';
-    vm.creationDate = 1466865057168;
-    vm.showToastr = showToastr;
+    vm.login = function() {
+        console.log('HEEEEY we are here :D');
+        dropboxSrv.login();
+    };
 
-    activate();
+    vm.getinfo = function () {
+      /*dropboxSrv.client.getAccountInfo(function(error, accountInfo) {
+        if (error) {
+          return handleError(error);  // Something went wrong.
+        }
 
-    function activate() {
-      getWebDevTec();
-      $timeout(function() {
-        vm.classAnimation = 'rubberBand';
-      }, 4000);
+        alert("Hello, " + accountInfo.name + "!");
+      });*/
+    };
+
+    //vm.loggedin = dropboxSrv.client.isAuthenticated();
+
+    console.log(vm.loggedin);
+
+    function handleError (err) {
+      $log.info(err);
     }
 
-    function showToastr() {
-      toastr.info('Fork <a href="https://github.com/Swiip/generator-gulp-angular" target="_blank"><b>generator-gulp-angular</b></a>');
-      vm.classAnimation = '';
-    }
 
-    function getWebDevTec() {
-      vm.awesomeThings = webDevTec.getTec();
-
-      angular.forEach(vm.awesomeThings, function(awesomeThing) {
-        awesomeThing.rank = Math.random();
-      });
+    function doSomethingCool(data) {
+      $log.info(data);
     }
   }
 })();

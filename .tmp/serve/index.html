@@ -20,13 +20,13 @@
     <!-- endinject -->
     <!-- endbuild -->
   </head>
-  <body>
+  <body class="reqmemroy">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <div ng-view></div>
-
+    
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
@@ -52,13 +52,17 @@
     <script src="app/components/webDevTec/webDevTec.service.js"></script>
     <script src="app/components/navbar/navbar.directive.js"></script>
     <script src="app/components/malarkey/malarkey.directive.js"></script>
+    <script src="app/components/dropbox/dropbox.min.js"></script>
     <script src="app/components/githubContributor/githubContributor.service.js"></script>
+    <script src="app/commons/services/dropbox.service.js"></script>
+    <script src="app/oauth/oauth.controller.js"></script>
     <script src="app/main/main.controller.js"></script>
     <script src="app/index.run.js"></script>
     <script src="app/index.route.js"></script>
     <script src="app/index.constants.js"></script>
     <script src="app/index.config.js"></script>
     <!-- endinject -->
+    
 
     <!-- inject:partials -->
     <!-- angular templates will be automatically converted in js and inserted here -->
