@@ -37,6 +37,8 @@
     <h4>Selecciona las fotografías que deseas agregar</h4>
   </div>
   <hr>
+
+  <a  ng-click="pics.goBack();" ng-if="pics.subFolder" class="btn btn-save-fix btn-primary btn-block btn-lg">Volver</a>
   <table class="table table-striped table-hover table-files">
     <thead>
       <tr>
@@ -45,21 +47,20 @@
       </tr>
     </thead>
     <tbody>
-<<<<<<< 96923c8bc0d98fc849c23b5ddc210af0acc62d71
       <tr ng-if="!pics.subFolder" ng-repeat="dir in pics.dirList" ng-click="pics.openOrAdd(dir);">
-        <td><span class="{{dir.type}}"> {{dir.action}} </span> ({{dir.type}})</td>
+        <td>
+          <span ng-class="{'glyphicon glyphicon-folder-close':dir.type=='folder','glyphicon glyphicon-file':dir.type=='file'}"></span></td>
         <td>{{dir.path}}</td>
       </tr>
       <tr ng-if="pics.subFolder" ng-repeat="dir in pics.openedDir" ng-click="pics.openOrAdd(dir);">
         <td><span class="{{dir.type}}r"> {{dir.action}} </span> ({{dir.type}})</td>
-=======
-    <tr ng-repeat="dir in pics.dirList" ng-click="pics.openOrAdd();" class="{{dir.action}}">
         <td>
           <span ng-class="{'glyphicon glyphicon-folder-close':dir.type=='folder','glyphicon glyphicon-file':dir.type=='file'}"></span>
         </td>
->>>>>>> Fix list of fyles styles
         <td>{{dir.path}}</td>
       </tr>
     </tbody>
   </table>
+  <a  ng-click="pics.save();" class="btn btn-save-fix btn-primary btn-block btn-lg">Guardar</a>
 </main>
+
