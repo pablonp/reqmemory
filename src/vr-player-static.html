@@ -6,7 +6,6 @@
     <meta name="description" content="Memoria Player">
     <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
   </head>
-
   <body>
 
     <a-scene>
@@ -198,16 +197,6 @@
       <a-sky color="#A3BED4"></a-sky>
       <a-camera position="0 1.8 1.5"></a-camera>
     </a-scene>
-    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-    <script>
-      $(document).ready(function(){
-        var hash = 'XXSDR';
-        var url = 'http://api.mkt.builders/recmemory/' + hash;
-        $.get(url, function(data){
-          console.log(data);
-        })
-      })
-    </script>
   </body>
 </html>
 
