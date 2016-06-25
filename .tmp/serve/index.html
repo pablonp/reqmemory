@@ -20,7 +20,6 @@
     <!-- endinject -->
     <!-- endbuild -->
   </head>
-  
   <body class="reqmemory">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -50,19 +49,15 @@
 
     <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
     <!-- inject:js -->
-    <script src="app/commons/services/dropbox.service.js"></script>
     <script src="app/index.module.js"></script>
     <script src="app/components/webDevTec/webDevTec.service.js"></script>
-    <script src="app/components/malarkey/malarkey.directive.js"></script>
-    <script src="app/components/navbar/navbar.directive.js"></script>
     <script src="app/components/dropbox/dropbox.min.js"></script>
+    <script src="app/components/navbar/navbar.directive.js"></script>
+    <script src="app/components/malarkey/malarkey.directive.js"></script>
     <script src="app/components/githubContributor/githubContributor.service.js"></script>
-<<<<<<< HEAD
-=======
     <script src="app/commons/services/dropbox.service.js"></script>
     <script src="app/templates/templates.controller.js"></script>
     <script src="app/pics/pics.controller.js"></script>
->>>>>>> 10f7a093c89222f71887f433d21bd8699339b254
     <script src="app/oauth/oauth.controller.js"></script>
     <script src="app/main/main.controller.js"></script>
     <script src="app/index.run.js"></script>
