@@ -1,9 +1,18 @@
 // Reqmemory stylesheet
 //
-$white:     white;
-$gray-dark: #4c4c4c;
+$white:          white;
+$gray-dark:      #4c4c4c;
+$gray:           #696969;
+
+$blue-dark:      #140d52;
+$blue:           #284E90;
+$blue-light:     #5094C3;
+$blue-lighter:   #A3BED4;
+
 
 $border-radius-lg: 8px;
+
+$text-color:       $gray;
 
 .page-wrapper {
   height: 100%;
@@ -11,32 +20,76 @@ $border-radius-lg: 8px;
 }
 
 .home-body {
-  background-image: url("../assets/images/background.jpg");
+  background-image: url("../assets/images/background.png");
   background-size: cover;
   height: 100%;
   position: fixed;
   width: 100%;
   .register-form {
-    margin-top: 20%;
-    background-color: rgba($white,0.85);
+    margin-top: 22%;
     border-radius: $border-radius-lg;
-    .register-log {
-      padding: 20px 25px 30px 25px;
+    padding: 40px 30px;
+    text-align: center;
+    h2 {
+      margin-bottom: 20px;
     }
-    .register-info {
-      padding: 40px 30px 30px 30px;
+    h4 {
+      color: $white;
+      line-height: 24px;
+    }
+    .btn {
+      margin-top: 10px;
     }
   }
   footer {
-    background: $gray-dark;
-    color: $white;
+    background-color: rgba($white,0.7);
     padding: 10px 0 0 0;
   }
 }
 
 .reqmemory {
+  color: $text-color;
+  h1,h2,h3 {
+    color: $blue-light;
+  }
   .btn-lg {
-    border-radius: 20px;
+    font-size: 16px;
+  }
+  header {
+    background-color: $blue-light;
+    a {
+      color: $white;
+    }
+  }
+  .table {
+    thead, tbody {
+      th, td {
+        padding-left: 60px;
+      }
+      th {
+        border-bottom: 0;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .footer-inner {
+    background-color: lighten($blue-lighter,14%);
+    padding: 12px 0 2px 0;
+  }
+}
+
+.reqmemory-header {
+  background-color: $blue-light;
+  a {
+    color: $white;
+  }
+  .navbar-brand {
+    padding: 0;
+    &> img {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+    }
   }
 }
 
