@@ -49,6 +49,8 @@
     </tbody>
   </table>
 </main>
+
+
 <ul>
     <li ng-repeat="dir in pics.dirList" ng-click="pics.openOrAdd(dir);">
         <span class="folder"> {{dir.action}} </span> {{dir.path}} ({{dir.type}})
@@ -77,4 +79,5 @@ Selected Files
 
 <div id="shareProgress">
     {{pics.current || 0}} of {{pics.total || 0}}
+
 </div>
