@@ -9,6 +9,7 @@ $blue:           #284E90;
 $blue-light:     #5094C3;
 $blue-lighter:   #A3BED4;
 
+$danger:         #d06363;
 
 $border-radius-lg: 8px;
 
@@ -31,6 +32,7 @@ $text-color:       $gray;
     padding: 40px 30px;
     text-align: center;
     h2 {
+      color: $white;
       margin-bottom: 20px;
     }
     h4 {
@@ -64,11 +66,16 @@ $text-color:       $gray;
   .table {
     thead, tbody {
       th, td {
-        padding-left: 60px;
+        &:first-of-type {
+          padding-left: 60px;
+        }
       }
       th {
         border-bottom: 0;
         text-transform: uppercase;
+      }
+      td {
+        line-height: 22px;
       }
     }
   }
@@ -92,7 +99,6 @@ $text-color:       $gray;
     }
   }
 }
-
 
 
 /**

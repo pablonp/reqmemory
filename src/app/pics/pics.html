@@ -37,7 +37,7 @@
     <h4>Selecciona las fotografías que deseas agregar</h4>
   </div>
   <hr>
-  <table class="table table-striped table-hover">
+  <table class="table table-striped table-hover table-files">
     <thead>
       <tr>
         <th>Tipo de archivo</th>
@@ -45,8 +45,10 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="dir in pics.dirList" ng-click="pics.openOrAdd();">
-        <td><span class="folder"> + </span> ({{dir.type}})</td>
+    <tr ng-repeat="dir in pics.dirList" ng-click="pics.openOrAdd();" class="{{dir.action}}">
+        <td>
+          <span ng-class="{'glyphicon glyphicon-folder-close':dir.type=='folder','glyphicon glyphicon-file':dir.type=='file'}"></span>
+        </td>
         <td>{{dir.path}}</td>
       </tr>
     </tbody>
