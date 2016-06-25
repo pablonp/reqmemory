@@ -1,5 +1,24 @@
-<div class="container">
-
-  <input ng-if="!main.loggedin" type="button" id="signin-button" ng-click="main.login()" value="Login with dropbox">
-
+<div class="home-body">
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 register-form">
+          <div class="row">
+            <div class="col-md-7 register-info">
+              <h4>Bienvenido a ReqMemory</h4>
+              <p>Reqmemory es una plataforma colaborativa, pensada para ayudar a personas con Alzheimer.</h3>
+            </div>
+            <div class="col-md-5 register-log">
+              <h3>Registrarte</h3>
+              <p>Accede a la plataforma y comenzá a ayudar a tus seres queridos.</p>
+              <a class="btn btn-primary btn-lg" ng-click="main.login();">Login with Dropbox</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="navbar-fixed-bottom text-center">
+    <p>Made with love in #ciclohmmdz | Hackathon Mendoza 2016 | Hackathon Mackers</p>
+  </footer>
 </div>

@@ -1,3 +1,47 @@
+// Reqmemory stylesheet
+//
+$white:     white;
+$gray-dark: #4c4c4c;
+
+$border-radius-lg: 8px;
+
+.page-wrapper {
+  height: 100%;
+  min-height: 100%;
+}
+
+.home-body {
+  background-image: url("../assets/images/background.jpg");
+  background-size: cover;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  .register-form {
+    margin-top: 20%;
+    background-color: rgba($white,0.85);
+    border-radius: $border-radius-lg;
+    .register-log {
+      padding: 20px 25px 30px 25px;
+    }
+    .register-info {
+      padding: 40px 30px 30px 30px;
+    }
+  }
+  footer {
+    background: $gray-dark;
+    color: $white;
+    padding: 10px 0 0 0;
+  }
+}
+
+.reqmemory {
+  .btn-lg {
+    border-radius: 20px;
+  }
+}
+
+
+
 /**
  *  If you want to override some bootstrap variables, you have to change values here.
  *  The list of variables are listed here bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss
