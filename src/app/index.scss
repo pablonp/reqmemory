@@ -37,7 +37,7 @@ $text-color:       $gray;
     }
   }
   footer {
-    background: $gray-dark;
+    background: $blue-light;
     color: $white;
     padding: 10px 0 0 0;
   }
@@ -55,6 +55,17 @@ $text-color:       $gray;
     background-color: $blue-light;
     a {
       color: $white;
+    }
+  }
+  .table {
+    thead, tbody {
+      th, td {
+        padding-left: 60px;
+      }
+      th {
+        border-bottom: 0;
+        text-transform: uppercase;
+      }
     }
   }
 }
