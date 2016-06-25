@@ -10,16 +10,8 @@
   <body>
 
     <a-scene>
-      <a-assets >  
-        <img id="photo1" src="assets/fotos_samples/01.jpg">
-        <img id="photo2" src="assets/fotos_samples/02.jpg">
-        <img id="photo3" src="assets/fotos_samples/03.jpg">
-        <img id="photo4" src="assets/fotos_samples/04.jpg">
-        <img id="photo5" src="assets/fotos_samples/05.jpg">
-        <img id="photo6" src="assets/fotos_samples/06.jpg">
-        <img id="photo7" src="assets/fotos_samples/07.jpg">
-        <img id="photo8" src="assets/fotos_samples/08.jpg">   
-        <img id="photo9" src="assets/fotos_samples/09.jpg">  
+      <a-assets timeout="10000">  
+         
         
         
       </a-assets>
@@ -204,7 +196,13 @@
         var hash = 'XXSDR';
         var url = 'http://api.mkt.builders/recmemory/' + hash;
         $.get(url, function(data){
-          console.log(data);
+          for (var i = 0; i < data.length; i++) {
+            var realId = i+1;
+            var img = document.createElement("IMG");
+            img.id = 'photo'+ realId; 
+            img.src = "assets/fotos_samples/01.jpg";
+            $('a-assets').html(img); 
+          };
         })
       })
     </script>
