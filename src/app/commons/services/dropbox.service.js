@@ -156,6 +156,8 @@ angular.module('dropbox', [])
                 }
 
 
+
+
                 /**
                  * Configure the authorize popup window
                  * Adapted from dropbox-js
@@ -227,6 +229,10 @@ angular.module('dropbox', [])
                         return oauth;
                     },
 
+
+                    share: function(path) {
+                        return POST(urls.shares + path, null, { short_url: false });
+                    },
 
                     authenticate: function () {
                         var self = this
