@@ -1,9 +1,18 @@
 // Reqmemory stylesheet
 //
-$white:     white;
-$gray-dark: #4c4c4c;
+$white:          white;
+$gray-dark:      #4c4c4c;
+$gray:           #696969;
+
+$blue-dark:      #140d52;
+$blue:           #284E90;
+$blue-light:     #5094C3;
+$blue-lighter:   #A3BED4;
+
 
 $border-radius-lg: 8px;
+
+$text-color:       $gray;
 
 .page-wrapper {
   height: 100%;
@@ -35,8 +44,25 @@ $border-radius-lg: 8px;
 }
 
 .reqmemory {
+  color: $text-color;
+  h1,h2,h3 {
+    color: $blue-light;
+  }
   .btn-lg {
-    border-radius: 20px;
+    font-size: 16px;
+  }
+  header {
+    background-color: $blue-light;
+    a {
+      color: $white;
+    }
+  }
+}
+
+.reqmemory-header {
+  background-color: $blue-light;
+  a {
+    color: $white;
   }
 }
 
