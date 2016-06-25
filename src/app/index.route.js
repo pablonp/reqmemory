@@ -17,8 +17,18 @@
         controller: 'AuthController',
         controllerAs: 'auth'
       })
+      .when('/templates', {
+        templateUrl: 'app/templates/templates.html',
+        controller: 'TemplatesController',
+        controllerAs: 'template'
+      })
+      .when('/pics', {
+        templateUrl: 'app/pics/pics.html',
+        controller: 'PicsController',
+        controllerAs: 'pics'
+      })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/login'
       });
   }
 

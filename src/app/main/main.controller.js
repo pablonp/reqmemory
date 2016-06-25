@@ -6,12 +6,14 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($log, $timeout) {
+  function MainController($log, $location, $timeout, Dropbox) {
     var vm = this;
 
-    vm.login = function() {
-        console.log('HEEEEY we are here :D');
-        dropboxSrv.login();
+    vm.login = function () {
+      vm.accountInfo = Dropbox.authenticate().then(function(status) {
+        $log.info('status', status);
+        $location.path('/templates');
+      });
     };
 
     vm.getinfo = function () {
