@@ -42,8 +42,7 @@ $text-color:       $gray;
     }
   }
   footer {
-    background: $blue-light;
-    color: $white;
+    background-color: rgba($white,0.7);
     padding: 10px 0 0 0;
   }
 }
