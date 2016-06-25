@@ -6,7 +6,7 @@
     .controller('PicsController', PicsController);
 
   /** @ngInject */
-  function PicsController($location, $log, $rootScope, $timeout, Dropbox) {
+  function PicsController($location, $log, $http, $rootScope, $timeout, Dropbox) {
     var vm = this;
 
     vm.pictureList = [];
@@ -34,6 +34,13 @@
       if (vm.current >= vm.total) {
         $rootScope.$broadcast('shares:send');
         $log.info('EVERYTHING READY TO SEND', vm.tmpList);
+
+        $http.post('http://api.mkt.builders/recmemory/save', {
+          images: vm.tmpList
+        }).then(function() {
+          alert('Podes ingresar a este link');
+        });
+
       } else {
         vm.current++;
       }
