@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('hack', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ngRoute', 'toastr']);
+    .module('hack', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ngRoute', 'toastr', 'dropbox']);
 
 })();

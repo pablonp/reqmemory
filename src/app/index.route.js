@@ -7,10 +7,15 @@
 
   function routeConfig($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('/login', {
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
         controllerAs: 'main'
+      })
+      .when('/oauth', {
+        templateUrl: 'app/oauth/oauth.html',
+        controller: 'AuthController',
+        controllerAs: 'auth'
       })
       .otherwise({
         redirectTo: '/'
