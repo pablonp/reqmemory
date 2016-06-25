@@ -6,12 +6,19 @@
     <meta name="description" content="Memoria Player">
     <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
   </head>
-
   <body>
 
     <a-scene>
-      <a-assets timeout="20000">  
-         
+      <a-assets>  
+        <img id="photo1" src="assets/fotos_samples/01.jpg">
+        <img id="photo2" src="assets/fotos_samples/02.jpg">
+        <img id="photo3" src="assets/fotos_samples/03.jpg">
+        <img id="photo4" src="assets/fotos_samples/04.jpg">
+        <img id="photo5" src="assets/fotos_samples/05.jpg">
+        <img id="photo6" src="assets/fotos_samples/06.jpg">
+        <img id="photo7" src="assets/fotos_samples/07.jpg">
+        <img id="photo8" src="assets/fotos_samples/08.jpg">   
+        <img id="photo9" src="assets/fotos_samples/09.jpg">  
         
         
       </a-assets>
@@ -190,22 +197,6 @@
       <a-sky color="#A3BED4"></a-sky>
       <a-camera position="0 1.8 1.5"></a-camera>
     </a-scene>
-    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-    <script>
-      $(document).ready(function(){
-        var hash = 'XXSDR';
-        var url = 'http://api.mkt.builders/recmemory/' + hash;
-        $.get(url, function(data){
-          for (var i = 0; i < data.length; i++) {
-            var realId = i+1;
-            var img = document.createElement("IMG");
-            img.id = 'photo'+ realId; 
-            img.src = "assets/fotos_samples/01.jpg";
-            $('a-assets').html(img); 
-          };
-        })
-      })
-    </script>
   </body>
 </html>
 
