@@ -12,7 +12,7 @@
     vm.login = function () {
       vm.accountInfo = Dropbox.authenticate().then(function(status) {
         $log.info('status', status);
-        $location.path('/templates');
+        $location.path('/pics');
       });
     };
 

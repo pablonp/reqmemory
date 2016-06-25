@@ -1,7 +1,7 @@
 Hola pics
 
 <ul>
-    <li ng-repeat="dir in pics.dirList">
-        {{dir}}
+    <li ng-repeat="dir in pics.dirList" ng-click="pics.openOrAdd();">
+        <span class="folder"> + </span> {{dir.path}} ({{dir.type}})
     </li>
 </ul>
