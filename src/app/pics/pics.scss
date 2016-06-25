@@ -1,0 +1,34 @@
+.table-files {
+  tr, th {
+    &:first-of-type {
+      width: 20%;
+    }
+  }
+  .glyphicon {
+    font-size: 18px;
+    &.glyphicon-file {
+      color: $blue-lighter;
+    }
+    &.glyphicon-folder-close {
+      color: $blue-light;
+    }
+  }
+  &.table-striped > tbody > tr:nth-of-type(odd){
+    &.add {
+      background-color: $blue-light;
+      color: $white;
+      .glyphicon-file, .glyphicon-folder-close {
+        color: $white;
+      }
+    }
+    &.remove {
+      &:hover {
+        background-color: $danger;
+        color: $white;
+        .glyphicon-file, .glyphicon-folder-close {
+          color: $white;
+        }
+      }
+    }
+  }
+}
