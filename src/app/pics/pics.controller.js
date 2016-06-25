@@ -52,10 +52,10 @@
         if (tmpIndex != -1) {
 
           vm.pictureList[tmpIndex] = {};
-          item.action = '-';
+          item.action = 'remove';
         } else {
           vm.pictureList.push(item);
-          item.action = '+';
+          item.action = 'add';
         }
       } else {
         openDir(item.path);
@@ -97,7 +97,7 @@
           vm.openedDir.push({
             path: value,
             type: (tmpName.length > 1 ? 'file' : 'folder'),
-            action: (alreadyAdded(value) == -1 ? '+' : '-')
+            action: (alreadyAdded(value) == -1 ? 'add' : 'remove')
           });
         });
 
@@ -116,7 +116,7 @@
         vm.dirList.push({
           path: value,
           type: (tmpName.length > 1 ? 'file' : 'folder'),
-          action: (alreadyAdded(value) == -1 ? '+' : '-')
+          action: (alreadyAdded(value) == -1 ? 'add' : 'remove')
         });
       });
     });

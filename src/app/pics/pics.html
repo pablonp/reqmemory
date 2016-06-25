@@ -51,11 +51,11 @@
     </thead>
     <tbody>
       <tr ng-if="!pics.subFolder" ng-repeat="dir in pics.dirList" ng-click="pics.openOrAdd(dir);">
-        <td><span class="folder"> {{dir.action}} </span> ({{dir.type}})</td>
+        <td><span class="{{dir.type}}"> {{dir.action}} </span> ({{dir.type}})</td>
         <td>{{dir.path}}</td>
       </tr>
       <tr ng-if="pics.subFolder" ng-repeat="dir in pics.openedDir" ng-click="pics.openOrAdd(dir);">
-        <td><span class="folder"> {{dir.action}} </span> ({{dir.type}})</td>
+        <td><span class="{{dir.type}}r"> {{dir.action}} </span> ({{dir.type}})</td>
         <td>{{dir.path}}</td>
       </tr>
 
