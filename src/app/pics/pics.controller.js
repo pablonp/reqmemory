@@ -23,6 +23,8 @@
 
     vm.current = 0;
 
+    vm.subFolder = false;
+
 
     if (!Dropbox.isAuthenticated()) {
       $location.path('/login');
@@ -43,19 +45,25 @@
       vm.userData = data;
     });
 
+
     vm.openOrAdd = function(item) {
       if (item.type == 'file') {
         var tmpIndex = alreadyAdded(item.path);
         if (tmpIndex != -1) {
 
           vm.pictureList[tmpIndex] = {};
-
+          item.action = '-';
         } else {
           vm.pictureList.push(item);
+          item.action = '+';
         }
       } else {
         openDir(item.path);
       }
+    };
+
+    vm.goBack = function() {
+      vm.subFolder = false;
     };
 
     vm.save = function() {
@@ -88,9 +96,12 @@
           var tmpName = value.split('.');
           vm.openedDir.push({
             path: value,
-            type: (tmpName.length > 1 ? 'file' : 'folder')
+            type: (tmpName.length > 1 ? 'file' : 'folder'),
+            action: (alreadyAdded(value) == -1 ? '+' : '-')
           });
         });
+
+        vm.subFolder = true;
       });
     }
 
@@ -104,7 +115,8 @@
         var tmpName = value.split('.');
         vm.dirList.push({
           path: value,
-          type: (tmpName.length > 1 ? 'file' : 'folder')
+          type: (tmpName.length > 1 ? 'file' : 'folder'),
+          action: (alreadyAdded(value) == -1 ? '+' : '-')
         });
       });
     });

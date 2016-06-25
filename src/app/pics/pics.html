@@ -41,6 +41,7 @@
     <h4>Selecciona las fotografías que deseas agregar</h4>
   </div>
   <hr>
+  <input type="button" value="Volver" ng-if="pics.subFolder" ng-click="pics.goBack();">
   <table class="table table-striped table-hover">
     <thead>
       <tr>
@@ -50,39 +51,17 @@
     </thead>
     <tbody>
       <tr ng-if="!pics.subFolder" ng-repeat="dir in pics.dirList" ng-click="pics.openOrAdd(dir);">
-        <td><span class="folder"> + </span> ({{dir.type}})</td>
+        <td><span class="folder"> {{dir.action}} </span> ({{dir.type}})</td>
         <td>{{dir.path}}</td>
       </tr>
       <tr ng-if="pics.subFolder" ng-repeat="dir in pics.openedDir" ng-click="pics.openOrAdd(dir);">
-        <td><span class="folder"> + </span> ({{dir.type}})</td>
+        <td><span class="folder"> {{dir.action}} </span> ({{dir.type}})</td>
         <td>{{dir.path}}</td>
       </tr>
+
     </tbody>
   </table>
 </main>
-<ul>
-    <li ng-repeat="dir in pics.dirList" ng-click="pics.openOrAdd(dir);">
-        <span class="folder"> {{dir.action}} </span> {{dir.path}} ({{dir.type}})
-    </li>
-</ul>
-
-
-Opened file
-
-<ul>
-    <li ng-repeat="dir in pics.openedDir" ng-click="pics.openOrAdd(dir);">
-        <span class="folder"> {{dir.action}} </span> {{dir.path}} ({{dir.type}})
-    </li>
-</ul>
-
-
-Selected Files
-
-<ul>
-    <li ng-repeat="dir in pics.pictureList" ng-if="dir.path">
-       {{dir.path}}
-    </li>
-</ul>
 
 <input type="button" ng-click="pics.save();" value="guardar">
 
