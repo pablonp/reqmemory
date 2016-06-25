@@ -27,7 +27,7 @@ $text-color:       $gray;
   position: fixed;
   width: 100%;
   .register-form {
-    margin-top: 22%;
+    margin-top: 12%;
     border-radius: $border-radius-lg;
     padding: 40px 30px;
     text-align: center;
@@ -52,6 +52,14 @@ $text-color:       $gray;
   footer {
     background-color: rgba($white,0.7);
     padding: 10px 0 0 0;
+  }
+  .home-icons {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 410px;
   }
 }
 
