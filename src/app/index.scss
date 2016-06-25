@@ -34,10 +34,16 @@ $text-color:       $gray;
     h2 {
       color: $white;
       margin-bottom: 20px;
+      font-weight: light;
     }
-    h4 {
+    p {
       color: $white;
+      font-size: 16px;
       line-height: 24px;
+      font-weight: lighter;
+    }
+    h2, p {
+      letter-spacing: 1.5px;
     }
     .btn {
       margin-top: 10px;
