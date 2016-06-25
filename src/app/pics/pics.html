@@ -28,20 +28,12 @@
   </div>
 </header>
 
-
-<input type="button" ng-click="pics.save();" value="guardar">
-
-<div id="shareProgress">
-    {{pics.current || 0}} of {{pics.total || 0}}
-</div>
-
 <main>
   <div class="container">
     <h3>Estás armando un recuerdo relacionado a FAMILIA</h3>
     <h4>Selecciona las fotografías que deseas agregar</h4>
   </div>
   <hr>
-  <input type="button" value="Volver" ng-if="pics.subFolder" ng-click="pics.goBack();">
   <table class="table table-striped table-hover">
     <thead>
       <tr>
@@ -58,13 +50,6 @@
         <td><span class="{{dir.type}}r"> {{dir.action}} </span> ({{dir.type}})</td>
         <td>{{dir.path}}</td>
       </tr>
-
     </tbody>
   </table>
 </main>
-
-<input type="button" ng-click="pics.save();" value="guardar">
-
-<div id="shareProgress">
-    {{pics.current || 0}} of {{pics.total || 0}}
-</div>
