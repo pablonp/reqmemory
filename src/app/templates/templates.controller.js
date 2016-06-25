@@ -6,8 +6,12 @@
     .controller('TemplatesController', TemplatesController);
 
   /** @ngInject */
-  function TemplatesController($log, $timeout, Dropbox) {
+  function TemplatesController($location, $log, $timeout, Dropbox) {
     var vm = this;
+
+    vm.goPics = function() {
+        $location.path('/pics');
+    };
 
   }
 })();
