@@ -20,25 +20,29 @@ $text-color:       $gray;
 }
 
 .home-body {
-  background-image: url("../assets/images/background.jpg");
+  background-image: url("../assets/images/background.png");
   background-size: cover;
   height: 100%;
   position: fixed;
   width: 100%;
   .register-form {
-    margin-top: 20%;
-    background-color: rgba($white,0.85);
+    margin-top: 22%;
     border-radius: $border-radius-lg;
-    .register-log {
-      padding: 20px 25px 30px 25px;
+    padding: 40px 30px;
+    text-align: center;
+    h2 {
+      margin-bottom: 20px;
     }
-    .register-info {
-      padding: 40px 30px 30px 30px;
+    h4 {
+      color: $white;
+      line-height: 24px;
+    }
+    .btn {
+      margin-top: 10px;
     }
   }
   footer {
-    background: $blue-light;
-    color: $white;
+    background-color: rgba($white,0.7);
     padding: 10px 0 0 0;
   }
 }
@@ -68,12 +72,24 @@ $text-color:       $gray;
       }
     }
   }
+  .footer-inner {
+    background-color: lighten($blue-lighter,14%);
+    padding: 12px 0 2px 0;
+  }
 }
 
 .reqmemory-header {
   background-color: $blue-light;
   a {
     color: $white;
+  }
+  .navbar-brand {
+    padding: 0;
+    &> img {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+    }
   }
 }
 
