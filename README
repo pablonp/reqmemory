@@ -16,41 +16,33 @@ Rizzo y Buckwalter (1997) señalan que la VR permite cuantificar al mismo tiempo
 El objetivo general del proyecto es que sea una experiencia de realidad virtual, estimulante para poder reforzar las conexiones que se buscan restablecer para aplicarlo en la estimulación cognitiva en procesos de afecciones neurológicas como los accidentes cerebrovasculares y la enfermedad de Alzheimer.
 
 #¿Quienes trabajamos?
-
-<<<<<<< HEAD
+=======
 ##Idea Original
+==
 Martiniano Caballieri 
 Martin Rabaglia
 
 ##Equipo en CicloHM MDZ - Junio 2016 
 =======
-Un equipo multidisciplinario como parte del proceso creativo de Hackathon Makers Mendoza,Argentina.
-Este equipo está conformado por:
-Diseño: Aile Rach
-Diseño: Celeste Riartes
-Diseño: Florencia Salcedo
-Maquetado: Juliana Victoria
-Diseño: Micaela Fernandez
-Maquetado: Silvana Eleonora Corvalan
-Coder: Claudemir de Lima Ferreira
-Legal: German Gimenez
-Idea Original and Coder: Martin Rabaglia
-Coder: Pablo Petran
 
->>>>>>> c050f4dfba544f75076ff6e475466083dd1cade2
+###Diseño e Identidad
+- Aile Rach
+- Celeste Riartes
+- Florencia Salcedo
+- Micaela Fernandez
+###Maquetado
+- Juliana Victoria
+- Silvana Eleonora Corvalan
+###Tecnología 
+- Claudemir de Lima Ferreira
+- Pablo Petran
+###Legales
+- German Gimenez
 
-German Gimenez 
-Silvana Corvalán 
-Juliana Victoria
-Flor Salcedo
-Luce Maferjer 
-Pablo Petran
-Aile Rach
-Miki Fernandez
-Claudiere 
+
 
 #Información técnica
-Navegador que soporte HTML5.
+Navegador que soporte HTML5, WebGL y WebVR
 El proyecto está desarrollado sobre Aframe.io, Angular, Bootstrap y otras cosas...
 
 LINKS:
