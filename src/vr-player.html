@@ -1,215 +1,117 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Memoria </title>
-    <meta name="description" content="Memoria Player">
+
+<head>
+  <meta charset="utf-8">
+  <title>Memoria </title>
+  <meta name="description" content="Memoria Player">
+
+  <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="
+    crossorigin="anonymous"></script>
     <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <a-scene>
-      <a-assets timeout="20000">  
-         
-        
-        
-      </a-assets>
-    <a-entity id="river" geometry="primitive: plane" material="color: blue"
-          position="-10 100 0" 
-          sound="src: assets/audio.mp3; autoplay: true"></a-entity>
-       <a-image id="photo_image1" 
-        src="#photo1" 
-         position="2.25 2.8 -12"  
-         rotation="0 0 0"
-          width="20" height="30" scale="0.4 0.4 0.4">
-          <a-animation 
-            attribute="position" 
-              from="2.25 2.8 -12" 
-              to="7.25 2.8 -12" 
-              begin="3000"
-              dur="1000">
-            </a-animation>
-      </a-image>
-     <a-image id="photo_image2" 
-        src="#photo7" 
-         position="-2.25 2.8 -12"  
-         rotation="0 0 0"
-          width="20" height="30" scale="0.4 0.4 0.4">
-          <a-animation 
-            attribute="position" 
-              from="-2.25 2.8 -12" 
-              to="-0.75 2.8 -12" 
-              begin="3000"
-              dur="1000">
-            </a-animation> 
-      </a-image>
-  
-      
-      <a-curvedimage src="#photo2" 
-            opacity="0"
-            rotation="0 45 0" 
-            position="0 1.05 -2"
-            height="3.0" radius="5.7" theta-length="72"
-                 rotation="0 100 0" >
-        <a-animation 
-            attribute="position" 
-              from="2 1.05 -2" 
-              to="0 1.05 -2" 
-              begin="3000"
-              dur="1000">
-            </a-animation>
-            <a-animation 
-            attribute="opacity" 
-              from="0" 
-              to="1" 
-              begin="0"
-              dur="4000">
-            </a-animation>
-      </a-curvedimage>
+</body>
+
+</html>
 
 
-      <a-curvedimage src="#photo5" 
-            opacity="0"
-            rotation="0 45 0" 
-            position="0 5 -2"
-            height="3.0" radius="5.7" theta-length="72"
-                 rotation="0 100 0" >
-        <a-animation 
-            attribute="position" 
-              from="2 4 -2" 
-              to="0 4 -2" 
-              begin="3000"
-              dur="1000">
-            </a-animation>
-            <a-animation 
-            attribute="opacity" 
-              from="0" 
-              to="1" 
-              begin="0"
-              dur="4000">
-            </a-animation>
-      </a-curvedimage>
-
-
-      
-
-
-        <a-curvedimage src="#photo8" 
-            opacity="0"
-            rotation="0 0 0" 
-            position="0 0 0"
-            height="3.0" radius="5.7" theta-length="72"
-                 rotation="0 100 0" >
-        <a-animation 
-            attribute="position" 
-              from="-1 1.05 0" 
-              to="-1 1.05 0" 
-              begin="3000"
-              dur="1000">
-            </a-animation>
-            <a-animation 
-            attribute="opacity" 
-              from="0" 
-              to="1" 
-              begin="0"
-              dur="4000">
-            </a-animation>
-      </a-curvedimage> 
-
-
-
-        <a-curvedimage src="#photo2" 
-            opacity="0"
-            rotation="0 0 0" 
-            position="0 0 0"
-            height="3.0" radius="5.7" theta-length="72"
-                 rotation="0 100 0" >
-        <a-animation 
-            attribute="position" 
-              from="-1 4.05 0" 
-              to="-1 4.05 0" 
-              begin="3000"
-              dur="1000">
-            </a-animation>
-            <a-animation 
-            attribute="opacity" 
-              from="0" 
-              to="1" 
-              begin="0"
-              dur="4000">
-            </a-animation>
-      </a-curvedimage> 
-
-
-      
-       <a-curvedimage src="#photo4" 
-            opacity="0"
-            rotation="0 180 0" 
-            position="-5.85 4 5" 
-            height="3.0" radius="5.7" theta-length="72"
-                 rotation="0 100 0" >
-        <a-animation 
-            attribute="position" 
-              from="-1.8 4.35 2" 
-              to="-1.8 4.35 2" 
-              begin="3000"
-              dur="1000">
-            </a-animation>
-            <a-animation 
-            attribute="opacity" 
-              from="0" 
-              to="1" 
-              begin="0"
-              dur="4000">
-            </a-animation>
-      </a-curvedimage>  
-
-       <a-curvedimage src="#photo3" 
-            opacity="0"
-            rotation="0 180 0" 
-            position="-5.85 4 5" 
-            height="3.0" radius="5.7" theta-length="72"
-                 rotation="0 100 0" >
-        <a-animation 
-            attribute="position" 
-              from="-1.8 1.35 2" 
-              to="-1.8 1.35 2" 
-              begin="3000"
-              dur="1000">
-            </a-animation>
-            <a-animation 
-            attribute="opacity" 
-              from="0" 
-              to="1" 
-              begin="0"
-              dur="4000">
-            </a-animation>
-      </a-curvedimage> 
-
-      <a-sky color="#A3BED4"></a-sky>
-      <a-camera position="0 1.8 1.5"></a-camera>
-    </a-scene>
-    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-    <script>
-      $(document).ready(function(){
+  <script>
         var hash = 'XXSDR';
         var url = 'http://api.mkt.builders/recmemory/' + hash;
         $.get(url, function(data){
-          for (var i = 0; i < data.length; i++) {
+
+          var assets = $("<a-assets></a-assets>");
+          console.log(data);
+          var loopLength = (data.length >= 9 ? 9 : data.length);
+          for (var i = 0; i < loopLength; i++) {
             var realId = i+1;
             var img = document.createElement("IMG");
             img.id = 'photo'+ realId; 
-            img.src = "assets/fotos_samples/01.jpg";
-            $('a-assets').html(img); 
-          };
-        })
-      })
+            img.src = data[i].url;
+            assets.append(img); 
+          }
+
+          var template = $('#template').html().replace('{{images}}', assets.html());
+          $('body').append(template);
+        });
     </script>
-  </body>
+<script id="template" type="xhtml/template">
+<a-scene>
+      {{images}}
+    <a-entity id="river" geometry="primitive: plane" material="color: blue" position="-10 100 0" sound="src: assets/audio.mp3; autoplay: true"></a-entity>
+    <a-image id="photo_image1" src="#photo1" position="2.25 2.8 -12" rotation="0 0 0" width="20" height="30" scale="0.4 0.4 0.4">
+      <a-animation attribute="position" from="2.25 2.8 -12" to="7.25 2.8 -12" begin="3000" dur="1000">
+      </a-animation>
+    </a-image>
+    <a-image id="photo_image2" src="#photo7" position="-2.25 2.8 -12" rotation="0 0 0" width="20" height="30" scale="0.4 0.4 0.4">
+      <a-animation attribute="position" from="-2.25 2.8 -12" to="-0.75 2.8 -12" begin="3000" dur="1000">
+      </a-animation>
+    </a-image>
+
+
+    <a-curvedimage src="#photo2" opacity="0" rotation="0 45 0" position="0 1.05 -2" height="3.0" radius="5.7" theta-length="72"
+      rotation="0 100 0">
+      <a-animation attribute="position" from="2 1.05 -2" to="0 1.05 -2" begin="3000" dur="1000">
+      </a-animation>
+      <a-animation attribute="opacity" from="0" to="1" begin="0" dur="4000">
+      </a-animation>
+    </a-curvedimage>
+
+
+    <a-curvedimage src="#photo5" opacity="0" rotation="0 45 0" position="0 5 -2" height="3.0" radius="5.7" theta-length="72"
+      rotation="0 100 0">
+      <a-animation attribute="position" from="2 4 -2" to="0 4 -2" begin="3000" dur="1000">
+      </a-animation>
+      <a-animation attribute="opacity" from="0" to="1" begin="0" dur="4000">
+      </a-animation>
+    </a-curvedimage>
+
+
+
+
+
+    <a-curvedimage src="#photo8" opacity="0" rotation="0 0 0" position="0 0 0" height="3.0" radius="5.7" theta-length="72" rotation="0 100 0">
+      <a-animation attribute="position" from="-1 1.05 0" to="-1 1.05 0" begin="3000" dur="1000">
+      </a-animation>
+      <a-animation attribute="opacity" from="0" to="1" begin="0" dur="4000">
+      </a-animation>
+    </a-curvedimage>
+
+
+
+    <a-curvedimage src="#photo2" opacity="0" rotation="0 0 0" position="0 0 0" height="3.0" radius="5.7" theta-length="72" rotation="0 100 0">
+      <a-animation attribute="position" from="-1 4.05 0" to="-1 4.05 0" begin="3000" dur="1000">
+      </a-animation>
+      <a-animation attribute="opacity" from="0" to="1" begin="0" dur="4000">
+      </a-animation>
+    </a-curvedimage>
+
+
+
+    <a-curvedimage src="#photo4" opacity="0" rotation="0 180 0" position="-5.85 4 5" height="3.0" radius="5.7" theta-length="72"
+      rotation="0 100 0">
+      <a-animation attribute="position" from="-1.8 4.35 2" to="-1.8 4.35 2" begin="3000" dur="1000">
+      </a-animation>
+      <a-animation attribute="opacity" from="0" to="1" begin="0" dur="4000">
+      </a-animation>
+    </a-curvedimage>
+
+    <a-curvedimage src="#photo3" opacity="0" rotation="0 180 0" position="-5.85 4 5" height="3.0" radius="5.7" theta-length="72"
+      rotation="0 100 0">
+      <a-animation attribute="position" from="-1.8 1.35 2" to="-1.8 1.35 2" begin="3000" dur="1000">
+      </a-animation>
+      <a-animation attribute="opacity" from="0" to="1" begin="0" dur="4000">
+      </a-animation>
+    </a-curvedimage>
+
+    <a-sky color="#A3BED4"></a-sky>
+    <a-camera position="0 1.8 1.5"></a-camera>
+  </a-scene>
+</script>
+
+</body>
+
 </html>
-
-  </body>
-</html>
-
-
