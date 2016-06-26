@@ -3,13 +3,13 @@
 
   angular
     .module('hack')
-    .directive('recHeader', acmeNavbar);
+    .directive('recFooter', recFooter);
 
   /** @ngInject */
-  function acmeNavbar() {
+  function recFooter() {
     var directive = {
       restrict: 'E',
-      templateUrl: 'app/components/navbar/navbar.html',
+      templateUrl: 'app/components/footer/footer.html',
       scope: {
           creationDate: '='
       },
