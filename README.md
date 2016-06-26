@@ -59,8 +59,8 @@ Estamos buscando apoyo tanto para desarrollo como para pruebas, escribinos a tin
 #¿Quienes trabajamos?
 
 ##Idea Original
-Martiniano Caballieri 
-Martin Rabaglia
+- Martiniano Caballieri 
+- Martin Rabaglia
 
 
 ##Equipo en CicloHM MDZ - Junio 2016 
