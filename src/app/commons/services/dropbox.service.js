@@ -36,7 +36,7 @@ angular.module('dropbox', [])
 
                 var authServer = 'https://www.dropbox.com'
                     , apiServer = 'https://api.dropbox.com'
-                    , fileServer = 'https://api-content.dropbox.com';
+                    , fileServer = 'https://content.dropboxapi.com';
 
 
                 /**
@@ -230,7 +230,7 @@ angular.module('dropbox', [])
                     },
 
 
-                    share: function(path) {
+                    share: function (path) {
                         return POST(urls.shares + path, null, { short_url: false });
                     },
 
