@@ -5,27 +5,31 @@
 
 Rec Memory (RC) es una plataforma que permite mejorar la experiencia de vida de pacientes de accidentes cerebrovasculares y enfermedades como el Alzheimer mediante tecnología VR.
 
-La plataforma ofrece una interacción familia/médico/enfermo en el cual colaboran generando contenido transformado en experiencias.
+La plataforma ofrece una interacción familia-médico-paciente en el cual colaboran generando contenido transformado en experiencias.
 
 Las aplicaciones de realidad virtual son cada día más utilizadas para mejorar y ampliar el proceso de rehabilitación cognitiva. Este proceso busca que la gente con daño cerebral trabaje para remediar o aliviar los déficits cognitivos que surgen tras una afección neurológica.
 
-Estas funciones se pueden ver como un apoyo a las actividades mentales primarias, entre las que se encuentran: la memoria, la atención, el pensamiento, el lenguaje, el razonamiento lógico, por mencionar algunas. En este sentido, las estrategias de rehabilitación cognitiva buscan compensar los déficits causados por accidentes cerebrovasculares y enfermedades como el Alzheimer, centrándose en minimizar los déficits existentes debido al trastorno o deterioro de los sistemas de memoria.
+Estas funciones se pueden ver como un apoyo a las actividades mentales primarias, entre las que se encuentran: la memoria, la atención, el pensamiento, el lenguaje, el razonamiento lógico, por mencionar algunas. En este sentido, las estrategias de rehabilitación cognitiva buscan compensar y minimizar los déficits causados por accidentes cerebrovasculares y enfermedades como el Alzheimer debido al trastorno o deterioro de los sistemas de memoria.
 
-Rizzo y Buckwalter (1997) señalan que la RV permite cuantificar al mismo tiempo (y en forma paralela), varios aspectos de las respuestas del examinado, tales como estrategias de resolución de problemas, latencia de respuestas, preferencias de campo visual, entre otras. Esto es una gran ventaja puesto que, mientras las mediciones tradicionales otorgan información parcelada respecto a los componentes de funciones cognitivas y predicen potencialmente cómo ciertos déficits podrían trasladarse al mundo real, la RV permite examinar estas relaciones directamente, posibilitando la evaluación de comportamientos cognitivos complejos (Schultheis et al., 2002). Lo anterior posibilita una estimación más individualizada de la magnitud de los apoyos requeridos por el sujeto para lograr un mejor funcionamiento en actividades cotidianas, pudiendo entonces diseñarse un plan de tratamiento más específico y acorde a sus necesidades (Rizzo et al., 2002; Schultheis et al., 2002).
+Rizzo y Buckwalter (1997) señalan que la VR permite cuantificar al mismo tiempo (y en forma paralela), varios aspectos de las respuestas del examinado, tales como estrategias de resolución de problemas, latencia de respuestas, preferencias de campo visual, entre otras. Esto es una gran ventaja puesto que, mientras las mediciones tradicionales otorgan información parcelada respecto a los componentes de funciones cognitivas y predicen potencialmente cómo ciertos déficits podrían trasladarse al mundo real, la RV permite examinar estas relaciones directamente, posibilitando la evaluación de comportamientos cognitivos complejos (Schultheis et al., 2002). Lo anterior posibilita una estimación más individualizada de la magnitud de los apoyos requeridos por el sujeto para lograr un mejor funcionamiento en actividades cotidianas, pudiendo entonces diseñarse un plan de tratamiento más específico y acorde a sus necesidades (Rizzo et al., 2002; Schultheis et al., 2002).
 
-El objetivo general del proyecto es que sea una experiencia de realidad virtual, estimulante y divertida para poder reforzar las conexiones que se quiere que se vuelvan a establecer para aplicarlo en la estimulación cognitiva en procesos de afecciones neurológicas como los accidentes cerebrovasculares y la enfermedad de Alzheimer.
+El objetivo general del proyecto es que sea una experiencia de realidad virtual, estimulante para poder reforzar las conexiones que se buscan restablecer para aplicarlo en la estimulación cognitiva en procesos de afecciones neurológicas como los accidentes cerebrovasculares y la enfermedad de Alzheimer.
 
 Desarrollada por:
 
-Un equipo multidisciplinario como parte del proceso creativo del Ciclo HM Mendoza Junio 2016
-
+Un equipo multidisciplinario como parte del proceso creativo de Hackathon Makers Mendoza,Argentina.
 Este equipo está conformado por:
--
--
--
--
--
--
+Diseño: Aile Rach
+Diseño: Celeste Riartes
+Diseño: Florencia Salcedo
+Maquetado: Juliana Victoria
+Diseño: Micaela Fernandez
+Maquetado: Silvana Eleonora Corvalan
+Coder: Claudemir de Lima Ferreira
+Legal: German Gimenez
+Idea Original and Coder: Martin Rabaglia
+Coder: Pablo Petran
+
 
 Información técnica
 Requerimientos:
