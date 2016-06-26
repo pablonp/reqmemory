@@ -26,6 +26,9 @@
     vm.subFolder = false;
 
 
+    vm.cantidad = 0;
+
+
     if (!Dropbox.isAuthenticated()) {
       $location.path('/login');
     }
@@ -38,7 +41,7 @@
         $http.post('http://api.mkt.builders/recmemory/save', {
           images: vm.tmpList
         }).then(function() {
-          alert('Podes ingresar a este link');
+          alert('Podes ingresar a este link: http://10.0.0.113:3000/vr-player.html#XXSDR');
         });
 
       } else {
@@ -59,8 +62,10 @@
         if (tmpIndex != -1) {
 
           vm.pictureList[tmpIndex] = {};
+          vm.cantidad--;
           item.action = 'remove';
         } else {
+          vm.cantidad++;
           vm.pictureList.push(item);
           item.action = 'add';
         }

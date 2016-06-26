@@ -26,6 +26,11 @@
       });*/
     };
 
+    
+    vm.goTerms = function() {
+      $location.path('/terms');
+    };
+
     //vm.loggedin = dropboxSrv.client.isAuthenticated();
 
     console.log(vm.loggedin);
