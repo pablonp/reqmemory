@@ -1,8 +1,9 @@
 # RecMemory
+## VR + Theraphy
 <img src="http://i.imgur.com/uD2BRAU.png">
-**VR + Theraphy**
 
 Rec Memory (RC) es una plataforma que permite mejorar la experiencia de vida de pacientes de accidentes cerebrovasculares y enfermedades como el Alzheimer mediante tecnología VR.
+
 
 <img src="http://i.imgur.com/grC2QgG.png">
 
@@ -12,7 +13,7 @@ La plataforma ofrece una interacción familia-médico-paciente en el cual colabo
 El objetivo general del proyecto es que sea una experiencia de realidad virtual, estimulante para poder reforzar las conexiones que se buscan restablecer para aplicarlo en la estimulación cognitiva en procesos de afecciones neurológicas como los accidentes cerebrovasculares y la enfermedad de Alzheimer.
 
 #¿Qué Tecnologias?
-=======
+
 Navegador Mobile con soporte  WebGL y WebVR (chrome!)
 El proyecto está desarrollado sobre 
 - Aframe.io, 
@@ -21,14 +22,13 @@ El proyecto está desarrollado sobre
 
 
 #¿Qué necesitas para correr esto?
-=======
-*Requerimientos 
-- node js instalado
 
+##Requerimientos 
+- node js instalado
 - npm install gulp -g
 - npm install bower -g
 
-*Desde la carpeta del proyecto
+##Desde la carpeta del proyecto
 - npm install
 - bower install
 - gulp serve
@@ -36,7 +36,7 @@ El proyecto está desarrollado sobre
 
 
 #¿Qué Incluye esta version?
-=======
+
 - Identidad Visual
 - Landing
 - Seleccion de fotografias via Dropbx
@@ -44,7 +44,7 @@ El proyecto está desarrollado sobre
 - Uso de fotografias seleccionadas en experiencia VR
 
 #¿Cuales son los proximos pasos?
-=======
+
 - Conseguir expertos en la materia que puedan probar y ajustar la experiencia.
 - Armar modo Medico + Familia y terapias
 - Agregar soporte para Google Drive
@@ -52,29 +52,33 @@ El proyecto está desarrollado sobre
 - Agregar soporte para auidos.
 - Crear seleccionador de fotos con preview y cambio de orden.
 
+Estamos buscando apoyo tanto para desarrollo como para pruebas, escribinos a tincho@genosha.com.ar
+
 
 
 #¿Quienes trabajamos?
-=======
+
 ##Idea Original
-==
 Martiniano Caballieri 
 Martin Rabaglia
 
-##Equipo en CicloHM MDZ - Junio 2016 
-=======
 
-###Diseño e Identidad
+##Equipo en CicloHM MDZ - Junio 2016 
+
+###Diseño Gráfico e Identidad
 - Aile Rach
 - Celeste Riartes
 - Florencia Salcedo
 - Micaela Fernandez
-###Maquetado
+
+###Maquetado y Diseño Experiencia.
 - Juliana Victoria
 - Silvana Eleonora Corvalan
+
 ###Tecnología 
 - Claudemir de Lima Ferreira
 - Pablo Petran
+
 ###Legales
 - German Gimenez
 
@@ -95,8 +99,8 @@ Rizzo y Buckwalter (1997) señalan que la VR permite cuantificar al mismo tiempo
 
 #Referencias
 
-http://revistas.udistrital.edu.co/ojs/index.php/vinculos/article/view/4682/6397
-http://www.laccei.org/LACCEI2012-Panama/RefereedPapers/no%20cw/RP060.pdf
+- http://revistas.udistrital.edu.co/ojs/index.php/vinculos/article/view/4682/6397
+- http://www.laccei.org/LACCEI2012-Panama/RefereedPapers/no%20cw/RP060.pdf
 
 
 
