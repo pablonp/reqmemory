@@ -32,8 +32,10 @@
     </script>
 <script id="template" type="xhtml/template">
 <a-scene>
-      {{images}}
-    <a-entity id="river" geometry="primitive: plane" material="color: blue" position="-10 100 0" sound="src: assets/audio.mp3; autoplay: true"></a-entity>
+      <a-assets>
+        {{images}}
+      </a-assets>
+    <a-entity id="river" geometry="primitive: plane" material="color: blue" position="0 5 2" sound="src: assets/audio.mp3; autoplay: true"></a-entity>
     <a-image id="photo_image1" src="#photo1" position="2.25 2.8 -12" rotation="0 0 0" width="20" height="30" scale="0.4 0.4 0.4">
       <a-animation attribute="position" from="2.25 2.8 -12" to="7.25 2.8 -12" begin="3000" dur="1000">
       </a-animation>
