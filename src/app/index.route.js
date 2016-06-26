@@ -27,6 +27,11 @@
         controller: 'PicsController',
         controllerAs: 'pics'
       })
+      .when('/terms', {
+        templateUrl: 'app/terms/terms.html',
+        controller: 'TermsController',
+        controllerAs: 'terms'
+      })
       .otherwise({
         redirectTo: '/login'
       });
