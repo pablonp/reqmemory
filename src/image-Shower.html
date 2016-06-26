@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Memoria </title>
+  <meta name="description" content="Memoria Player">
+
+  <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="
+    crossorigin="anonymous"></script>
+    <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+  </head>
+  <script>
+        var hash = 'XXSDR';
+        var url = 'http://api.mkt.builders/recmemory/' + hash;
+        $.get(url, function(data){
+
+          var assets = $("<a-assets></a-assets>");
+          console.log(data);
+          var loopLength = (data.length >= 9 ? 9 : data.length);
+          for (var i = 0; i < loopLength; i++) {
+            var realId = i+1;
+            var img = document.createElement("IMG");
+            img.id = 'photo'+ realId; 
+            img.src = data[i].url;
+            assets.append(img); 
+          }
+
+          var template = $('#template').html().replace('{{images}}', assets.html());
+          $('body').append(template);
+        });
+    </script>
+<script id="template" type="xhtml/template">
+<h1> Se deberian ver todas las imagenes aca abajo </h1>
+     
+        {{images}}
+   
+   
+</script>
+
+</body>
+
+</html>
