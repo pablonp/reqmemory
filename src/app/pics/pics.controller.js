@@ -19,6 +19,13 @@
 
     vm.tmpList = [];
 
+    vm.supportedFiles = [
+      'jpg',
+      'jpeg',
+      'png',
+      'bmp'
+    ];
+
     vm.images_stats = {
       total: 0,
       processed: 0,
@@ -32,10 +39,14 @@
       link: 'http://www.recmemory.org/vr-player.html?id='
     };
 
-    if (!Dropbox.isAuthenticated()) {
-      $location.path('/login');
-    }
 
+    /**
+     * @ngdoc event
+     * @name .PicsController#shares:new
+     * @description Event triggered when we got all the Public URLs of the selected images.
+     * @eventOf .PicsController // the same part as above other than the hash
+     * @eventType  on
+     */
     $rootScope.$on('shares:new', function () {
       if (vm.images_stats.processed >= vm.images_stats.total) {
         $rootScope.$broadcast('shares:send');
@@ -55,10 +66,47 @@
     });
 
 
-    Dropbox.userInfo().then(function (data) {
-      $log.warn('USER DATA', data);
-      vm.userData = data;
-    });
+    /**
+      * @ngdoc method
+      * @name PicsController#init //.# 
+      * @methodOf PicsController // .
+      */
+    function init() {
+
+      if (!Dropbox.isAuthenticated()) {
+        $location.path('/login');
+      }
+
+      Dropbox.userInfo().then(function (data) {
+        $log.warn('USER DATA', data);
+        vm.userData = data;
+      });
+
+      Dropbox.readdir('/').then(function (data) {
+        _.forEach(data, function (value) {
+          var tmpName = value.split('.'),
+            id = vm.dirList.length;
+
+          vm.dirList.push({
+            path: value,
+            type: (tmpName.length > 1 ? 'file' : 'folder'),
+            action: (alreadyAdded(value) == -1 ? 'add' : 'remove'),
+            id: id
+          });
+
+          if (tmpName.length > 1 && _.indexOf(vm.supportedFiles, tmpName[1].toLowerCase()) != -1) {
+            Dropbox.thumbnailUrl(value,[]).then(function(data) {
+              $log.info(data);
+              vm.dirList[id].thumbnailUrl = data;
+            });
+          }
+
+        });
+
+        vm.status.loading = false;
+      });
+    }
+
 
 
     vm.openOrAdd = function (item) {
@@ -106,6 +154,7 @@
 
     };
 
+
     function openDir(dir) {
       vm.openedDir = [];
       vm.status.loading = true;
@@ -124,22 +173,11 @@
       });
     }
 
+
     function alreadyAdded(dir) {
       return _.findIndex(vm.pictureList, function (o) { return o.path == dir; });
     }
 
-
-    Dropbox.readdir('/').then(function (data) {
-      _.forEach(data, function (value) {
-        var tmpName = value.split('.');
-        vm.dirList.push({
-          path: value,
-          type: (tmpName.length > 1 ? 'file' : 'folder'),
-          action: (alreadyAdded(value) == -1 ? 'add' : 'remove')
-        });
-      });
-
-      vm.status.loading = false;
-    });
+    init();
   }
 })();
