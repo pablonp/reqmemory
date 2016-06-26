@@ -24,7 +24,7 @@ function browserSyncInit(baseDir, browser) {
   var server = {
     baseDir: baseDir,
     routes: routes,
-    https: true
+    https: false
   };
 
   /*
@@ -40,7 +40,7 @@ function browserSyncInit(baseDir, browser) {
     startPath: '/',
     server: server,
     browser: browser,
-    https: true
+    https: false
   });
 }
 
