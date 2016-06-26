@@ -29,7 +29,7 @@
       loading: true,
       saving: false,
       is_sub_folder: false,
-      link: 'http://www.recmemory.org/#/view/?id='
+      link: 'http://www.recmemory.org/vr-player.html?id='
     };
 
     if (!Dropbox.isAuthenticated()) {
@@ -46,7 +46,7 @@
         }).then(function () {
           vm.status.saving = false;
           vm.status.success = true;
-          vm.status.link = "http://www.recmemory.org/#/view/?id=XXSDR";
+          vm.status.link = "http://www.recmemory.org/vr-player.html?id=XXSDR";
         });
 
       } else {

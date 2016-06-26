@@ -24,13 +24,11 @@
   &.table-striped > tbody > tr {
     &.remove {
       &.file {
-        &:hover {
-          background-color: $danger;
+          background-color: $brand-success;
           color: $white;
           .glyphicon-file, .glyphicon-folder-close {
             color: $white;
           }
-        }
       }
     }
   }
