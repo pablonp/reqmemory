@@ -15,6 +15,9 @@ $border-radius-lg: 8px;
 
 $text-color:       $gray;
 
+* {
+  font-family: 'Work Sans', sans-serif;
+}
 .page-wrapper {
   height: 100%;
   min-height: 100%;
