@@ -15,21 +15,25 @@ Rizzo y Buckwalter (1997) señalan que la RV permite cuantificar al mismo tiempo
 
 El objetivo general del proyecto es que sea una experiencia de realidad virtual, estimulante y divertida para poder reforzar las conexiones que se quiere que se vuelvan a establecer para aplicarlo en la estimulación cognitiva en procesos de afecciones neurológicas como los accidentes cerebrovasculares y la enfermedad de Alzheimer.
 
-Desarrollada por:
+#¿Quienes trabajamos?
 
-Un equipo multidisciplinario como parte del proceso creativo del Ciclo HM Mendoza Junio 2016
+##Idea Original
+Martiniano Caballieri 
+Martin Rabaglia
 
-Este equipo está conformado por:
--
--
--
--
--
--
+##Equipo en CicloHM MDZ - Junio 2016 
 
-Información técnica
-Requerimientos:
+German Gimenez 
+Silvana Corvalán 
+Juliana Victoria
+Flor Salcedo
+Luce Maferjer 
+Pablo Petran
+Aile Rach
+Miki Fernandez
+Claudiere 
 
+#Información técnica
 Navegador que soporte HTML5.
 El proyecto está desarrollado sobre Aframe.io, Angular, Bootstrap y otras cosas...
 
