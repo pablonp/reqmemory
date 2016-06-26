@@ -1,56 +1,29 @@
 <div class="home-template">
-  <header class="navbar navbar-static-top" id="top" role="banner">
-    <div class="container">
-      <div class="navbar-header">
-        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a href="../" class="navbar-brand">REC Memory</a>
-      </div>
-      <nav id="bs-navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a href="../getting-started/">Acerca de REC Memory</a>
-          </li>
-          <li class="dropdown">
-            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Juliana Lopez<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Templates</a></li>
-              <li><a href="#">Grupo Familiar</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Salir</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <rec-header></rec-header>
   <main>
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
-        <hr />
-        <h3 class="text-center">Bienvenido a RECMemory</h3>
-        <h4 class="text-center">Seleccione el tipo de recuerdos con los que desea trabajar</h4>
-        <p class="text-center">Las aplicaciones de realidad virtual son cada día más utilizadas para mejorar y ampliar el
-  proceso de rehabilitación cognitiva. Este proceso busca que la gente con daño cerebral
-  trabaje para remediar o aliviar los déficits cognitivos que surgen tras una afección
-  neurológica.
-        </p>
-        <select class="form-control">
-          <option>Viaje</option>
-          <option>Celebración</option>
-          <option>Cumpleaños</option>
-          <option>Familia</option>
-          <option>Pareja</option>
-          <option>Amistad</option>
-          <option>Vida cotidiana</option>
-        </select>
-        <a ui-ref="pics" ng-click="template.goPics();" class="btn btn-primary btn-block btn-lg">Importar imágenes de Dropbox</a>
+          <img src="../assets/images/template-images.svg" alt="" class="template-img" />
+          <h3 class="text-center">Bienvenido a REC Memory</h3>
+          <h4 class="text-center">Seleccione el tipo de recuerdos con los que desea trabajar</h4>
+          <p class="text-center">Las aplicaciones de realidad virtual son cada día más utilizadas para mejorar y ampliar el proceso de rehabilitación
+            cognitiva.
+          </p>
+          <select class="form-control">
+            <option>Viaje</option>
+            <option>Celebración</option>
+            <option>Cumpleaños</option>
+            <option>Familia</option>
+            <option>Pareja</option>
+            <option>Amistad</option>
+            <option>Vida cotidiana</option>
+          </select>
+          <a ng-click="template.goPics();" class="btn btn-primary btn-block btn-lg">Importar imágenes de Dropbox</a>
+        </div>
       </div>
     </div>
   </main>
+
+  <rec-footer></rec-footer>
 </div>

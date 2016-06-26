@@ -9,6 +9,7 @@ $blue:           #284E90;
 $blue-light:     #5094C3;
 $blue-lighter:   #A3BED4;
 
+$danger:         #d06363;
 
 $border-radius-lg: 8px;
 
@@ -26,16 +27,23 @@ $text-color:       $gray;
   position: fixed;
   width: 100%;
   .register-form {
-    margin-top: 22%;
+    margin-top: 12%;
     border-radius: $border-radius-lg;
     padding: 40px 30px;
     text-align: center;
     h2 {
-      margin-bottom: 20px;
-    }
-    h4 {
       color: $white;
+      margin-bottom: 20px;
+      font-weight: light;
+    }
+    p {
+      color: $white;
+      font-size: 16px;
       line-height: 24px;
+      font-weight: lighter;
+    }
+    h2, p {
+      letter-spacing: 1.5px;
     }
     .btn {
       margin-top: 10px;
@@ -44,6 +52,14 @@ $text-color:       $gray;
   footer {
     background-color: rgba($white,0.7);
     padding: 10px 0 0 0;
+  }
+  .home-icons {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 410px;
   }
 }
 
@@ -64,11 +80,16 @@ $text-color:       $gray;
   .table {
     thead, tbody {
       th, td {
-        padding-left: 60px;
+        &:first-of-type {
+          padding-left: 60px;
+        }
       }
       th {
         border-bottom: 0;
         text-transform: uppercase;
+      }
+      td {
+        line-height: 22px;
       }
     }
   }
@@ -91,8 +112,22 @@ $text-color:       $gray;
       height: 50px;
     }
   }
+  .nav > li > a:hover, .nav > li > a:focus,
+  .nav .open > a, .nav .open > a:hover, .nav .open > a:focus,
+  .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-color: darken($blue-light,10%);
+    color: $white;
+  }
+  .dropdown-menu {
+    padding: 0;
+    &> li > a, &> li > a:hover, &> li > a:focus {
+      padding: 10px 20px;
+    }
+    .divider {
+      margin: 0;
+    }
+  }
 }
-
 
 
 /**

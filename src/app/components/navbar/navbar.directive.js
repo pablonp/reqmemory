@@ -3,7 +3,7 @@
 
   angular
     .module('hack')
-    .directive('acmeNavbar', acmeNavbar);
+    .directive('recHeader', acmeNavbar);
 
   /** @ngInject */
   function acmeNavbar() {
