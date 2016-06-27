@@ -348,7 +348,7 @@ angular.module('dropbox', [])
                     thumbnailUrl: function (path, params) {
                         return urls.thumbnails
                             + path
-                            + '?format=jpeg&size=m&access_token='
+                            + '?format=jpeg&size=l&access_token='
                             + oauth.access_token;
                     },
 
@@ -358,7 +358,7 @@ angular.module('dropbox', [])
                     readThumbnail: function(path) {
                         return GET(urls.thumbnails + 
                             path + 
-                            '?format=jpeg&size=m&access_token=' + 
+                            '?format=jpeg&size=l&access_token=' + 
                             oauth.access_token, {  });
                     },
 

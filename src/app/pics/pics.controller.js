@@ -3,6 +3,12 @@
 
   angular
     .module('hack')
+    .filter('noslash', function() {
+      return function(input) {
+        input = input || '';
+        return input.substr(1, input.length);
+      };
+    })
     .controller('PicsController', PicsController);
 
   /** @ngInject */
@@ -82,21 +88,7 @@
         vm.userData = data;
       });
 
-      Dropbox.readdir('/').then(function (data) {
-        _.forEach(data, function (value) {
-          var tmpName = value.split('.'),
-            id = vm.dirList.length;
-
-          vm.dirList.push({
-            path: value,
-            type: (tmpName.length > 1 ? 'file' : 'folder'),
-            action: (alreadyAdded(value) == -1 ? 'add' : 'remove'),
-            thumbnailUrl: Dropbox.thumbnailUrl(value)
-          });
-        });
-
-        vm.status.loading = false;
-      });
+      openDir('');
     }
 
 
@@ -119,7 +111,7 @@
     };
 
     vm.goBack = function () {
-      vm.status.is_sub_folder = false;
+      openDir('');
     };
 
     vm.save = function () {
@@ -153,17 +145,20 @@
       Dropbox.readdir('/' + dir).then(function (data) {
         _.forEach(data, function (value) {
           var tmpName = value.split('.'),
-            id = vm.openedDir.length;
+            id = vm.openedDir.length,
+            type = (tmpName.length > 1 ? 'file' : 'folder');
           vm.openedDir.push({
             path: value,
-            type: (tmpName.length > 1 ? 'file' : 'folder'),
+            type: type,
             action: (alreadyAdded(value) == -1 ? 'add' : 'remove'),
-            thumbnailUrl: Dropbox.thumbnailUrl(value)
+            supported: (type == 'file' ? (_.indexOf(vm.supportedFiles, tmpName[1]) != -1) : true),
+            thumbnailUrl: (type == 'file' ? Dropbox.thumbnailUrl(value) : '../assets/images/folder.png')
           });
         });
 
         vm.status.loading = false;
-        vm.status.is_sub_folder = true;
+        vm.status.is_sub_folder = (dir !== '');
+
       });
     }
 
