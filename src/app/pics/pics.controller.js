@@ -91,16 +91,8 @@
             path: value,
             type: (tmpName.length > 1 ? 'file' : 'folder'),
             action: (alreadyAdded(value) == -1 ? 'add' : 'remove'),
-            id: id
+            thumbnailUrl: Dropbox.thumbnailUrl(value)
           });
-
-          if (tmpName.length > 1 && _.indexOf(vm.supportedFiles, tmpName[1].toLowerCase()) != -1) {
-            Dropbox.thumbnailUrl(value,[]).then(function(data) {
-              $log.info(data);
-              vm.dirList[id].thumbnailUrl = data;
-            });
-          }
-
         });
 
         vm.status.loading = false;
@@ -160,11 +152,13 @@
       vm.status.loading = true;
       Dropbox.readdir('/' + dir).then(function (data) {
         _.forEach(data, function (value) {
-          var tmpName = value.split('.');
+          var tmpName = value.split('.'),
+            id = vm.openedDir.length;
           vm.openedDir.push({
             path: value,
             type: (tmpName.length > 1 ? 'file' : 'folder'),
-            action: (alreadyAdded(value) == -1 ? 'add' : 'remove')
+            action: (alreadyAdded(value) == -1 ? 'add' : 'remove'),
+            thumbnailUrl: Dropbox.thumbnailUrl(value)
           });
         });
 

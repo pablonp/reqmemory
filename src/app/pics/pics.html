@@ -33,6 +33,32 @@
       </tr>
     </tbody>
   </table>
+
+  <div class="container pics">
+
+    <div ng-repeat="dir in pics.openedDir" ng-if="$index % 6 == 0" class="row">
+        <div ng-click="pics.openOrAdd(pics.openedDir[$index]);" class="col-xs-2 pic-thumb text-center {{pics.openedDir[$index].action}} {{pics.openedDir[$index].type}}">
+          <img ng-click="pics.openOrAdd(pics.openedDir[$index]);" ng-src="{{pics.openedDir[$index].thumbnailUrl}}" alt="{{pics.openedDir[$index].path}}" class="img-rounded">
+        </div>
+        <div ng-if="pics.openedDir[$index + 1].thumbnailUrl" ng-click="pics.openOrAdd(pics.openedDir[$index + 1]);" class="col-xs-2 pic-thumb text-center {{pics.openedDir[$index + 1].action}} {{pics.openedDir[$index + 1].type}}">
+          <img ng-if="pics.openedDir[$index + 1].thumbnailUrl" ng-src="{{pics.openedDir[$index + 1].thumbnailUrl}}" alt="{{pics.openedDir[$index + 1].path}}" class="img-rounded">
+        </div>
+        <div ng-if="pics.openedDir[$index + 2].thumbnailUrl" ng-click="pics.openOrAdd(pics.openedDir[$index + 2]);" class="col-xs-2 pic-thumb text-center {{pics.openedDir[$index + 2].action}} {{pics.openedDir[$index + 2].type}}">
+          <img ng-if="pics.openedDir[$index + 2].thumbnailUrl" ng-src="{{pics.openedDir[$index + 2].thumbnailUrl}}" alt="{{pics.openedDir[$index + 2].path}}" class="img-rounded">
+        </div>
+        <div ng-if="pics.openedDir[$index + 3].thumbnailUrl" ng-click="pics.openOrAdd(pics.openedDir[$index + 3]);" class="col-xs-2 pic-thumb text-center {{pics.openedDir[$index + 3].action}} {{pics.openedDir[$index + 3].type}}">
+          <img ng-if="pics.openedDir[$index + 3].thumbnailUrl" ng-src="{{pics.openedDir[$index + 3].thumbnailUrl}}" alt="{{pics.openedDir[$index + 3].path}}" class="img-rounded">
+        </div>
+        <div ng-if="pics.openedDir[$index + 4].thumbnailUrl" ng-click="pics.openOrAdd(pics.openedDir[$index + 4]);" class="col-xs-2 pic-thumb text-center {{pics.openedDir[$index + 4].action}} {{pics.openedDir[$index + 4].type}}">
+          <img ng-if="pics.openedDir[$index + 4].thumbnailUrl" ng-src="{{pics.openedDir[$index + 4].thumbnailUrl}}" alt="{{pics.openedDir[$index + 4].path}}" class="img-rounded">
+        </div>
+        <div ng-if="pics.openedDir[$index + 5].thumbnailUrl" ng-click="pics.openOrAdd(pics.openedDir[$index + 5]);" class="col-xs-2 pic-thumb text-center {{pics.openedDir[$index + 5].action}} {{pics.openedDir[$index + 5].type}}">
+          <img ng-click="pics.openOrAdd(pics.openedDir[$index + 5]);" ng-src="{{pics.openedDir[$index + 5].thumbnailUrl}}" alt="{{pics.openedDir[$index + 5].path}}" class="img-rounded">
+        </div>
+    </div>
+
+  </div>
+
   <a ng-click="pics.save();" class="btn btn-save-fix btn-primary btn-block btn-lg">Guardar ({{pics.images_stats.selected}} imagenes)</a>
 </main>
 

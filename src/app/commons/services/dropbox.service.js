@@ -355,6 +355,13 @@ angular.module('dropbox', [])
 
                     // readThumbnail
 
+                    readThumbnail: function(path) {
+                        return GET(urls.thumbnails + 
+                            path + 
+                            '?format=jpeg&size=m&access_token=' + 
+                            oauth.access_token, {  });
+                    },
+
 
                     revertFile: function (path, rev) {
                         return POST(urls.restore + path, null, { rev: rev });
