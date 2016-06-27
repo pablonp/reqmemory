@@ -22,7 +22,7 @@
     </div>
   </div>
 
-  <a ng-click="pics.save();" class="btn btn-save-fix btn-primary btn-block btn-lg">Guardar ({{pics.images_stats.selected}} imagenes)</a>
+  <a ng-click="pics.save();" ng-if="pics.pictureList.length > 0" class="btn btn-save-fix btn-primary btn-block btn-lg">Guardar ({{pics.images_stats.selected}} imagenes)</a>
 </main>
 
 <div class="save-container" ng-if="pics.status.saving">

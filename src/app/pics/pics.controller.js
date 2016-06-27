@@ -19,8 +19,6 @@
 
     vm.userData = {};
 
-    vm.dirList = [];
-
     vm.openedDir = [];
 
     vm.tmpList = [];
