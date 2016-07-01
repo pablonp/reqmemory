@@ -11,9 +11,35 @@
     <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
   </head>
   <script>
+
+        var preloadPictures = function(pictureUrls, callback) {
+            var i,
+                j,
+                loaded = 0;
+
+            for (i = 0, j = pictureUrls.length; i < j; i++) {
+                (function (img, src) {
+                    img.onload = function () {                               
+                        if (++loaded == pictureUrls.length && callback) {
+                            callback();
+                        }
+                    };
+
+                    // Use the following callback methods to debug
+                    // in case of an unexpected behavior.
+                    img.onerror = function () {};
+                    img.onabort = function () {};
+
+                    img.src = src;
+                } (new Image(), pictureUrls[i]));
+            }
+        };
+
         var hash = 'XXSDR';
         var url = 'http://api.mkt.builders/recmemory/' + hash;
+          var imagesList = [];
         $.get(url, function(data){
+
 
           var assets = $("<a-assets></a-assets>");
           console.log(data);
@@ -23,11 +49,16 @@
             var img = document.createElement("IMG");
             img.id = 'photo'+ realId; 
             img.src = data[i].url;
+            imagesList.push(data[i].url.replace('?dl=1', '?raw=1'));
             assets.append(img); 
           }
 
-          var template = $('#template').html().replace('{{images}}', assets.html());
-          $('body').append(template);
+
+          preloadPictures(imagesList, function(){
+            var template = $('#template').html().replace('{{images}}', assets.html());
+            $('body').append(template);
+          });
+
         });
     </script>
 <script id="template" type="xhtml/template">
